@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-
 const program = require('commander');
+const pkg = require('../package.json');
 
 program
-.version('1.0.0').parse(process.argv);
+.version(pkg.version)
+.command('key', 'Manage API key')
+.parse(process.argv);
 
 console.log(' Hello from coindex')
-console.log(process.argv);
