@@ -1,7 +1,7 @@
-const Configstore = require('configstore');
+const Configstore = require('configstore').default;
 const pkg = require('../package.json');
 
-class KeyManger {
+class KeyManager {
 constructor() {
 
     this.conf = new Configstore(pkg.name);
@@ -13,11 +13,11 @@ set(key) {
     return key;
 }
 
-get(key) {
-    this.conf.get('apiKey');
+getKey() {
+    const key = this.conf.get('apiKey');
 
     if (!key) {
-        throw new Errror('No API key found')
+        throw new Error('No API key found')
     }
     return key;
 }
@@ -26,7 +26,7 @@ deleteKey(){
     const key = this.conf.get('apiKey');
 
     if (!key) {
-        throw new Error ('No API key fouund')
+        throw new Error ('No API key found')
     }
     this.conf.delete('apiKey');
 
@@ -34,4 +34,4 @@ deleteKey(){
 }
 }
 
-module.exports = KeyManger;
+module.exports = KeyManager;
