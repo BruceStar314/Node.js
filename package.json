@@ -1,0 +1,28 @@
+{
+  "name": "coindex",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/BruceStar314/Node.js#readme",
+  "bugs": {
+    "url": "https://github.com/BruceStar314/Node.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BruceStar314/Node.js.git"
+  },
+  "license": "ISC",
+  "author": "Bruce Reeves",
+  "type": "commonjs",
+  "main": "index.js",
+  "bin": "./bin/coindex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.13.1",
+    "colors": "^1.4.0",
+    "commander": "^14.0.2",
+    "configstore": "^7.1.0",
+    "inquirer": "^12.10.0"
+  }
+}
