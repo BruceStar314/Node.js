@@ -9,5 +9,6 @@ const program = new Command();
 program
 .version(pkg.version)
 .command('key', 'Manage API key')
+.command('check', 'Check coin price information')
 .parse(process.argv);
 
